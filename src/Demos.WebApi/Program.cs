@@ -15,9 +15,15 @@ namespace Demos.WebApi
                 var client = new HttpClient();
 
                 var response = client.GetAsync(baseAddress + "api/values").Result;
-
+                Console.WriteLine("response =>");
                 Console.WriteLine(response);
+
+                Console.WriteLine();
+                Console.WriteLine("response Content =>");
                 Console.WriteLine(response.Content.ReadAsStringAsync().Result);
+
+                Console.WriteLine();
+                Console.WriteLine("press any key to exit!");
                 Console.ReadLine();
             } 
         }
